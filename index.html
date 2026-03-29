@@ -19,7 +19,6 @@
 
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-main); margin: 0; background: var(--bg-body); }
         
-        /* Seletor de Idiomas Flutuante */
         .lang-switcher {
             position: fixed;
             top: 20px;
@@ -75,11 +74,9 @@
 
         @media (max-width: 768px) {
             .container { grid-template-columns: 1fr; }
-            .header-container { flex-direction: column; text-align: center; justify-content: center; }
-            .lang-switcher { top: 10px; right: 10px; }
+            .header-container { flex-direction: column; text-align: center; }
         }
 
-        /* Lógica de Troca de Idioma */
         [data-lang]:not(.active-lang) { display: none; }
     </style>
 </head>
@@ -111,76 +108,74 @@
             <h2 data-lang="en"><i class="fa fa-user"></i> About Me</h2>
             <h2 data-lang="es"><i class="fa fa-user"></i> Sobre Mí</h2>
             
-            <p data-lang="pt" class="active-lang">Estudante de Engenharia Informática no IPT, focado em Administração de Redes e Cibersegurança. Combino formação técnica robusta (QNQ 5/4) com competências avançadas em comunicação e inteligência emocional para resolução de problemas complexos.</p>
-            <p data-lang="en">Computer Engineering student at IPT, focused on Network Administration and Cybersecurity. I combine robust technical training (QNQ 5/4) with advanced skills in communication and emotional intelligence for complex problem solving.</p>
-            <p data-lang="es">Estudiante de Ingeniería Informática en el IPT, enfocado en Administración de Redes y Ciberseguridad. Combino una sólida formación técnica (QNQ 5/4) con habilidades avanzadas en comunicación e inteligencia emocional para la resolución de problemas complejos.</p>
+            <p data-lang="pt" class="active-lang">Estudante de Engenharia Informática no IPT, focado em Administração de Redes e Cibersegurança. Combino formação técnica robusta (QNQ 5/4) com competências avançadas em comunicação e inteligência emocional.</p>
+            <p data-lang="en">Computer Engineering student at IPT, focused on Network Administration and Cybersecurity. I combine robust technical training (QNQ 5/4) with advanced skills in communication and emotional intelligence.</p>
+            <p data-lang="es">Estudiante de Ingeniería Informática en el IPT, enfocado en Administración de Redes y Ciberseguridad. Combino una sólida formación técnica (QNQ 5/4) con habilidades avanzadas en comunicación e inteligencia emocional.</p>
         </section>
 
         <section class="card">
-            <h2 data-lang="pt" class="active-lang"><i class="fa fa-gamepad"></i> Experiência Recente</h2>
-            <h2 data-lang="en"><i class="fa fa-gamepad"></i> Recent Experience</h2>
-            <h2 data-lang="es"><i class="fa fa-gamepad"></i> Experiencia Reciente</h2>
+            <h2 data-lang="pt" class="active-lang"><i class="fa fa-briefcase"></i> Experiência Profissional</h2>
+            <h2 data-lang="en"><i class="fa fa-briefcase"></i> Professional Experience</h2>
+            <h2 data-lang="es"><i class="fa fa-briefcase"></i> Experiencia Profesional</h2>
 
             <div class="experience-item">
                 <h3>Freelance GameTester.gg</h3>
                 <span class="sub-info">2024 – <span data-lang="pt" class="active-lang">Presente</span><span data-lang="en">Present</span><span data-lang="es">Presente</span></span>
-                
                 <ul data-lang="pt" class="active-lang">
-                    <li>Execução de testes estruturados de software em ambientes de pré-lançamento.</li>
-                    <li>Identificação e documentação de defeitos funcionais e problemas de desempenho.</li>
-                    <li>Realização de testes multiplataforma (PS4 Pro, Xbox Series X, Windows, iOS).</li>
-                    <li>Elaboração de relatórios de bugs com detalhes passo a passo para reprodução.</li>
+                    <li>Testes estruturados de software em ambientes de pré-lançamento.</li>
+                    <li>Identificação de defeitos funcionais e problemas de desempenho.</li>
+                    <li>Testes multiplataforma (PS4 Pro, Xbox Series X, Windows, iOS).</li>
                 </ul>
                 <ul data-lang="en">
-                    <li>Execution of structured software tests in pre-release environments.</li>
-                    <li>Identification and documentation of functional defects and performance issues.</li>
-                    <li>Cross-platform testing (PS4 Pro, Xbox Series X, Windows, iOS).</li>
-                    <li>Creation of bug reports with step-by-step details for replication.</li>
+                    <li>Structured software testing in pre-release environments.</li>
+                    <li>Identification of functional defects and performance issues.</li>
+                    <li>Multi-platform testing (PS4 Pro, Xbox Series X, Windows, iOS).</li>
                 </ul>
                 <ul data-lang="es">
-                    <li>Ejecución de pruebas de software estructuradas en entornos de pre-lanzamiento.</li>
-                    <li>Identificación y documentación de defectos funcionales y problemas de rendimiento.</li>
+                    <li>Pruebas estructuradas de software en entornos de pre-lanzamiento.</li>
+                    <li>Identificación de defectos funcionales y problemas de rendimiento.</li>
                     <li>Pruebas multiplataforma (PS4 Pro, Xbox Series X, Windows, iOS).</li>
-                    <li>Elaboración de informes de errores con detalles paso a paso para su reproducción.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>IT Support (Freelancer)</h3>
+                <span class="sub-info">04/2021 – 11/2021</span>
+                <ul data-lang="pt" class="active-lang">
+                    <li>Suporte técnico Nível 1 e 2 (Hardware e Software).</li>
+                    <li>Configuração de redes domésticas e empresariais.</li>
+                    <li>Instalação e otimização de sistemas Windows e Linux.</li>
+                </ul>
+                <ul data-lang="en">
+                    <li>Level 1 and 2 technical support (Hardware & Software).</li>
+                    <li>Home and business network configuration.</li>
+                    <li>Installation and optimization of Windows and Linux systems.</li>
+                </ul>
+                <ul data-lang="es">
+                    <li>Soporte técnico Nivel 1 y 2 (Hardware y Software).</li>
+                    <li>Configuración de redes domésticas y empresariales.</li>
+                    <li>Instalación y optimización de sistemas Windows y Linux.</li>
                 </ul>
             </div>
         </section>
 
         <section class="card">
-            <h2 data-lang="pt" class="active-lang"><i class="fa fa-graduation-cap"></i> Educação Técnica Detalhada</h2>
-            <h2 data-lang="en"><i class="fa fa-graduation-cap"></i> Detailed Technical Education</h2>
-            <h2 data-lang="es"><i class="fa fa-graduation-cap"></i> Educación Técnica Detallada</h2>
+            <h2 data-lang="pt" class="active-lang"><i class="fa fa-graduation-cap"></i> Formação Académica e Técnica</h2>
+            <h2 data-lang="en"><i class="fa fa-graduation-cap"></i> Academic & Technical Education</h2>
+            <h2 data-lang="es"><i class="fa fa-graduation-cap"></i> Formación Académica y Técnica</h2>
 
             <div class="experience-item">
                 <h3 data-lang="pt" class="active-lang">Licenciatura em Engenharia Informática</h3>
                 <h3 data-lang="en">B.S. in Computer Engineering</h3>
                 <h3 data-lang="es">Grado en Ingeniería Informática</h3>
-                <span class="sub-info">IPT - Abrantes | 2025 - 2028</span>
-                <p data-lang="pt" class="active-lang">Disciplinas principais: Algoritmia, Arquitetura de Redes, Sistemas Operativos e Bases de Dados.</p>
-                <p data-lang="en">Core subjects: Algorithms, Network Architecture, Operating Systems, and Databases.</p>
-                <p data-lang="es">Materias principales: Algoritmia, Arquitectura de Redes, Sistemas Operativos y Bases de Datos.</p>
+                <span class="sub-info">IPT - Tomar | 2025 - <span data-lang="pt" class="active-lang">Presente</span><span data-lang="en">Present</span><span data-lang="es">Presente</span></span>
             </div>
 
             <div class="experience-item">
-                <h3 data-lang="pt" class="active-lang">Especialista em Cibersegurança (QNQ 5)</h3>
-                <h3 data-lang="en">Cybersecurity Specialist (QNQ 5)</h3>
-                <h3 data-lang="es">Especialista en Ciberseguridad (QNQ 5)</h3>
+                <h3 data-lang="pt" class="active-lang">Cibersegurança (QNQ 5)</h3>
+                <h3 data-lang="en">Cybersecurity (QNQ 5)</h3>
+                <h3 data-lang="es">Ciberseguridad (QNQ 5)</h3>
                 <span class="sub-info">2022 - 2024 | 1500h</span>
-                <ul data-lang="pt" class="active-lang">
-                    <li>Vulnerability Assessment e Penetration Testing.</li>
-                    <li>Gestão de Redes Seguras e Firewalls.</li>
-                    <li>Segurança em Sistemas Windows e Linux.</li>
-                </ul>
-                <ul data-lang="en">
-                    <li>Vulnerability Assessment and Penetration Testing.</li>
-                    <li>Secure Network Management and Firewalls.</li>
-                    <li>Security in Windows and Linux Systems.</li>
-                </ul>
-                <ul data-lang="es">
-                    <li>Evaluación de Vulnerabilidades y Pruebas de Penetración.</li>
-                    <li>Gestión de Redes Seguras y Firewalls.</li>
-                    <li>Seguridad en Sistemas Windows y Linux.</li>
-                </ul>
             </div>
 
             <div class="experience-item">
@@ -188,54 +183,17 @@
                 <h3 data-lang="en">Mechatronics & Metrology (QNQ 4)</h3>
                 <h3 data-lang="es">Mecatrónica y Metrología (QNQ 4)</h3>
                 <span class="sub-info">Efonape - Rio de Janeiro | 1500h</span>
-                <ul data-lang="pt" class="active-lang">
-                    <li>Automação Industrial e PLC.</li>
-                    <li>Metrologia: Instrumentação e medição de alta precisão.</li>
-                    <li>Sistemas Eletromecânicos e Manutenção Industrial.</li>
-                </ul>
-                <ul data-lang="en">
-                    <li>Industrial Automation and PLC.</li>
-                    <li>Metrology: High-precision instrumentation and measurement.</li>
-                    <li>Electromechanical Systems and Industrial Maintenance.</li>
-                </ul>
-                <ul data-lang="es">
-                    <li>Automatización Industrial y PLC.</li>
-                    <li>Metrología: Instrumentación y medición de alta precisión.</li>
-                    <li>Sistemas Electromecánicos y Mantenimiento Industrial.</li>
-                </ul>
             </div>
         </section>
     </main>
 
     <aside>
         <section class="card">
-            <h2 data-lang="pt" class="active-lang"><i class="fa fa-certificate"></i> Soft Skills</h2>
-            <h2 data-lang="en"><i class="fa fa-certificate"></i> Soft Skills</h2>
-            <h2 data-lang="es"><i class="fa fa-certificate"></i> Soft Skills</h2>
-            
-            <div style="margin-bottom:15px">
-                <strong data-lang="pt" class="active-lang">Coaching e Comunicação</strong>
-                <strong data-lang="en">Coaching & Communication</strong>
-                <strong data-lang="es">Coaching y Comunicación</strong>
-                <br><small>10/2022 - 11/2022</small>
-            </div>
-            <div>
-                <strong data-lang="pt" class="active-lang">Inteligência Emocional</strong>
-                <strong data-lang="en">Emotional Intelligence</strong>
-                <strong data-lang="es">Inteligencia Emocional</strong>
-                <br><small>08/2022 - 08/2022</small>
-            </div>
-        </section>
-
-        <section class="card">
-            <h2 data-lang="pt" class="active-lang"><i class="fa fa-language"></i> Competências</h2>
-            <h2 data-lang="en"><i class="fa fa-language"></i> Skills</h2>
-            <h2 data-lang="es"><i class="fa fa-language"></i> Competencias</h2>
-            
-            <p><strong>PT:</strong> Native<br>
-               <strong>ES:</strong> C1 (Advanced)<br>
-               <strong>EN:</strong> B2 (Independent)</p>
-            <p><i class="fa fa-car"></i> <span data-lang="pt" class="active-lang">Carta de Condução</span><span data-lang="en">Driving License</span><span data-lang="es">Carnet de Conducir</span>: <strong>A, B</strong></p>
+            <h2 data-lang="pt" class="active-lang"><i class="fa fa-id-card"></i> Info</h2>
+            <h2 data-lang="en"><i class="fa fa-id-card"></i> Info</h2>
+            <h2 data-lang="es"><i class="fa fa-id-card"></i> Info</h2>
+            <p><strong>PT:</strong> Native | <strong>ES:</strong> C1 | <strong>EN:</strong> B2</p>
+            <p><i class="fa fa-car"></i> <span data-lang="pt" class="active-lang">Carta</span><span data-lang="en">License</span><span data-lang="es">Carnet</span>: <strong>A, B</strong></p>
         </section>
 
         <section class="card">
@@ -243,10 +201,10 @@
             <h2 data-lang="en"><i class="fa fa-heart"></i> Hobbies</h2>
             <h2 data-lang="es"><i class="fa fa-heart"></i> Hobbies</h2>
             <div class="hobby-grid">
-                <div class="hobby-item"><i class="fa fa-parachute-box"></i><span data-lang="pt" class="active-lang">Salto Paraquedas</span><span data-lang="en">Skydiving</span><span data-lang="es">Paracaidismo</span></div>
-                <div class="hobby-item"><i class="fa fa-mountain"></i><span data-lang="pt" class="active-lang">Esp. Radicais</span><span data-lang="en">X-Sports</span><span data-lang="es">Dep. Radicales</span></div>
+                <div class="hobby-item"><i class="fa fa-parachute-box"></i><span>Skydiving</span></div>
                 <div class="hobby-item"><i class="fa fa-plane"></i><span data-lang="pt" class="active-lang">Viagens</span><span data-lang="en">Travel</span><span data-lang="es">Viajes</span></div>
-                <div class="hobby-item"><i class="fa fa-user-astronaut"></i><span data-lang="pt" class="active-lang">Geek Events</span><span data-lang="en">Geek Events</span><span data-lang="es">Eventos Geek</span></div>
+                <div class="hobby-item"><i class="fa fa-headset"></i><span>Geek</span></div>
+                <div class="hobby-item"><i class="fa fa-mountain"></i><span>Radical</span></div>
             </div>
         </section>
     </aside>
@@ -254,29 +212,24 @@
 
 <footer>
     <div class="footer-content">
-        <p>&copy; 2026 Ikaros Escovedo | <span data-lang="pt" class="active-lang">Feito com</span><span data-lang="en">Made with</span><span data-lang="es">Hecho con</span> <i class="fa fa-code"></i></p>
+        <p>&copy; 2026 Ikaros Escovedo</p>
         <div class="social-links">
-            <a href="mailto:escovedoikaros@hotmail.com" title="Email"><i class="fa fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/ikaros-escovedo/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/ikaros-esc" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:escovedoikaros@hotmail.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/ikaros-escovedo/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ikaros-esc" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </footer>
 
 <script>
     function switchLang(lang) {
-        // Altera estado dos botões
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.remove('active');
             if(btn.innerText.toLowerCase() === lang) btn.classList.add('active');
         });
-
-        // Altera visibilidade dos textos
         document.querySelectorAll('[data-lang]').forEach(el => {
             el.classList.remove('active-lang');
-            if(el.getAttribute('data-lang') === lang) {
-                el.classList.add('active-lang');
-            }
+            if(el.getAttribute('data-lang') === lang) el.classList.add('active-lang');
         });
     }
 </script>
