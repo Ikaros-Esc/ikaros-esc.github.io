@@ -31,16 +31,19 @@
         .card { background: var(--bg-card); padding: 1.8rem; margin-bottom: 1.5rem; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border); }
         
         h2 { color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; display: flex; align-items: center; gap: 10px; font-size: 1.4rem; }
+        h3 { margin-bottom: 5px; font-size: 1.2rem; }
+        .sub-info { color: var(--text-muted); font-size: 0.9rem; display: block; margin-bottom: 10px; }
         
-        /* Skills Grid */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 15px; }
-        .skill-badge { background: #e0f2fe; color: #0369a1; padding: 8px; border-radius: 6px; text-align: center; font-size: 0.85rem; font-weight: 600; }
+        .skill-badge { background: #e0f2fe; color: #0369a1; padding: 8px; border-radius: 6px; text-align: center; font-size: 0.8rem; font-weight: 600; }
         
         .experience-item { margin-bottom: 2rem; border-left: 3px solid var(--primary); padding-left: 15px; }
+        ul { padding-left: 20px; }
+        
         .hobby-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .hobby-item { background: #f1f5f9; padding: 10px; border-radius: 8px; text-align: center; font-size: 0.8rem; }
         
-        footer { background: #f1f5f9; padding: 2rem; color: var(--text-muted); text-align: center; }
+        footer { background: #f1f5f9; padding: 2rem; color: var(--text-muted); text-align: center; border-top: 1px solid var(--border); }
         [data-lang]:not(.active-lang) { display: none !important; }
     </style>
 </head>
@@ -58,6 +61,7 @@
         <div>
             <h1>Ikaros Escovedo</h1>
             <p>Engenharia Informática & Cibersegurança</p>
+            <small><i class="fa fa-calendar"></i> 20/10/1997 | <i class="fa fa-map-marker-alt"></i> Abrantes, Portugal</small>
         </div>
     </div>
 </header>
@@ -79,8 +83,41 @@
         </section>
 
         <section class="card">
+            <h2 data-lang="pt" class="active-lang"><i class="fa fa-robot"></i> Projetos em Destaque</h2>
+            <h2 data-lang="en"><i class="fa fa-robot"></i> Featured Projects</h2>
+            <h2 data-lang="es"><i class="fa fa-robot"></i> Proyectos Destacados</h2>
+            <div class="experience-item">
+                <h3>Veículo Robótico 4WD (Bluetooth)</h3>
+                <span class="sub-info">Laboratório de Microssistemas (IPT) | 2025/26</span>
+                <p>Protótipo robótico controlado via Bluetooth com sistema de tração 4WD.</p>
+                <ul>
+                    <li>Depuração de hardware (conflitos RX/TX, polaridade de motores).</li>
+                    <li>Integração com Arduino, Motor Shield L293D e módulos HC-05.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card">
             <h2 data-lang="pt" class="active-lang"><i class="fa fa-user"></i> Sobre Mim</h2>
-            <p data-lang="pt" class="active-lang">Estudante de Engenharia Informática, apaixonado pela segurança de sistemas e infraestruturas de rede. Focado em proteção de ativos digitais e suporte técnico de nível avançado.</p>
+            <p>Estudante de Engenharia Informática no IPT, focado em Administração de Redes e Cibersegurança. Combino formação técnica robusta com competências avançadas em comunicação.</p>
+        </section>
+
+        <section class="card">
+            <h2 data-lang="pt" class="active-lang"><i class="fa fa-briefcase"></i> Experiência Profissional</h2>
+            <div class="experience-item">
+                <h3>Freelance GameTester.gg</h3>
+                <span class="sub-info">2024 – Presente</span>
+                <ul>
+                    <li>Testes estruturados de software e identificação de bugs.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>IT Support (Freelancer)</h3>
+                <span class="sub-info">04/2021 – 11/2021</span>
+                <ul>
+                    <li>Suporte Nível 1/2 e configuração de redes.</li>
+                </ul>
+            </div>
         </section>
     </main>
 
@@ -89,6 +126,15 @@
             <h2 data-lang="pt" class="active-lang"><i class="fa fa-id-card"></i> Info</h2>
             <p><strong>PT:</strong> Nativo | <strong>ES:</strong> C1 | <strong>EN:</strong> B2</p>
             <p><i class="fa fa-car"></i> Carta: <strong>A, B</strong></p>
+        </section>
+        <section class="card">
+            <h2><i class="fa fa-heart"></i> Hobbies</h2>
+            <div class="hobby-grid">
+                <div class="hobby-item"><i class="fa fa-parachute-box"></i><br>Skydiving</div>
+                <div class="hobby-item"><i class="fa fa-plane"></i><br>Viagens</div>
+                <div class="hobby-item"><i class="fa fa-headset"></i><br>Geek</div>
+                <div class="hobby-item"><i class="fa fa-mountain"></i><br>Radical</div>
+            </div>
         </section>
     </aside>
 </div>
@@ -112,6 +158,5 @@
     const savedLang = localStorage.getItem('cv-lang') || 'pt';
     switchLang(savedLang);
 </script>
-
 </body>
 </html>
