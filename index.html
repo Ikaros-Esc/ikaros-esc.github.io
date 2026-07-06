@@ -77,7 +77,7 @@
             .header-container { flex-direction: column; text-align: center; }
         }
 
-        [data-lang]:not(.active-lang) { display: none; }
+        [data-lang]:not(.active-lang) { display: none !important; }
     </style>
 </head>
 <body>
@@ -107,7 +107,6 @@
             <h2 data-lang="pt" class="active-lang"><i class="fa fa-user"></i> Sobre Mim</h2>
             <h2 data-lang="en"><i class="fa fa-user"></i> About Me</h2>
             <h2 data-lang="es"><i class="fa fa-user"></i> Sobre Mí</h2>
-            
             <p data-lang="pt" class="active-lang">Estudante de Engenharia Informática no IPT, focado em Administração de Redes e Cibersegurança. Combino formação técnica robusta (QNQ 5/4) com competências avançadas em comunicação e inteligência emocional.</p>
             <p data-lang="en">Computer Engineering student at IPT, focused on Network Administration and Cybersecurity. I combine robust technical training (QNQ 5/4) with advanced skills in communication and emotional intelligence.</p>
             <p data-lang="es">Estudiante de Ingeniería Informática en el IPT, enfocado en Administración de Redes y Ciberseguridad. Combino una sólida formación técnica (QNQ 5/4) con habilidades avanzadas en comunicación e inteligencia emocional.</p>
@@ -177,13 +176,6 @@
                 <h3 data-lang="es">Ciberseguridad (QNQ 5)</h3>
                 <span class="sub-info">2022 - 2024 | 1500h</span>
             </div>
-
-            <div class="experience-item">
-                <h3 data-lang="pt" class="active-lang">Mecatrônica & Metrologia (QNQ 4)</h3>
-                <h3 data-lang="en">Mechatronics & Metrology (QNQ 4)</h3>
-                <h3 data-lang="es">Mecatrónica y Metrología (QNQ 4)</h3>
-                <span class="sub-info">Efonape - Rio de Janeiro | 1500h</span>
-            </div>
         </section>
     </main>
 
@@ -231,7 +223,12 @@
             el.classList.remove('active-lang');
             if(el.getAttribute('data-lang') === lang) el.classList.add('active-lang');
         });
+        localStorage.setItem('cv-lang', lang);
     }
+
+    // Carrega o idioma salvo pelo utilizador
+    const savedLang = localStorage.getItem('cv-lang') || 'pt';
+    switchLang(savedLang);
 </script>
 
 </body>
